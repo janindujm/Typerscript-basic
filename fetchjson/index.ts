@@ -16,12 +16,16 @@ axios.get(url).then((response) => {
   const title = todo.title
   const userId = todo.userId
 
-  console.log(`
-    The title is: '${title}'
-    The id is: '${id}'
-
-    `);
+    logTodo(id, title)
 
 }).catch((error) => {
   console.error('Error fetching data:', error);
 });
+
+const logTodo = (id: number, title: string): void => {
+    console.log(`
+        The title is: '${title}'
+        The id is: '${id}'
+    
+        `);
+    }
